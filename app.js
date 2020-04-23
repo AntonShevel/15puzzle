@@ -1,3 +1,5 @@
+'use strict';
+
 const Game = require('./modules/game');
 const Screen = require('./modules/screen');
 const Board = require('./modules/board');
@@ -7,11 +9,14 @@ const screen = new Screen('15 Puzzle');
 const board = new Board(screen, fieldSize);
 const game = new Game(fieldSize);
 
-const text = screen.createText(20, 1, 'Use arrows to move a cursor and space to move a tile');
+const text = screen.createText(
+  20,
+  1,
+  'Use arrows to move a cursor and space to move a tile'
+);
 
 game.start();
 board.render(game.tiles);
-
 
 // Quit on Escape, q, or Control-C.
 screen.onKey(['escape', 'q', 'C-c'], (ch, key) => {

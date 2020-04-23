@@ -19,7 +19,7 @@ function swap(array, keyA, keyB) {
 function shuffle(array) {
   const newArray = [...array];
   newArray.forEach((number, index, numbers) => {
-    let randomIndex = Math.floor(Math.random() * (numbers.length - index));
+    const randomIndex = Math.floor(Math.random() * (numbers.length - index));
     swap(numbers, index, randomIndex);
   });
 
@@ -28,5 +28,5 @@ function shuffle(array) {
 
 module.exports = {
   swap,
-  shuffle
+  shuffle,
 };

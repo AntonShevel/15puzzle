@@ -21,7 +21,7 @@ describe('Board class', () => {
     let board, screen;
     beforeEach(() => {
       screen = new Screen('test');
-      screen.createBox.mockReturnValue({focus: jest.fn()});
+      screen.createBox.mockReturnValue({ focus: jest.fn() });
       board = new Board(screen, 2);
     });
 
@@ -39,7 +39,7 @@ describe('Board class', () => {
     let board;
     beforeEach(() => {
       const screen = new Screen('test');
-      screen.createBox.mockReturnValue({focus: () => {}});
+      screen.createBox.mockReturnValue({ focus: () => {} });
       board = new Board(screen, 2);
       board.render([null, 1, 2, 3]);
     });
@@ -90,8 +90,8 @@ describe('Board class', () => {
           },
           setText: function (text) {
             this.text = text;
-          }
-        }
+          },
+        };
       });
       board = new Board(screen, 2);
       board.render([null, 1, 2, 3]);

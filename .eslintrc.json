@@ -12,8 +12,6 @@
       "impliedStrict": true
     }
   },
-  "extends": ["standard", "prettier"],
-  "rules": {
-    "prettier/prettier": "error"
-  }
+  "extends": ["standard", "prettier", "plugin:prettier/recommended"],
+  "plugins": ["prettier"]
 }

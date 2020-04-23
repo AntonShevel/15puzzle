@@ -1,6 +1,6 @@
 'use strict';
 
-const {shuffle, swap} = require('./helper');
+const { shuffle, swap } = require('./helper');
 
 class Game {
   /**
@@ -18,8 +18,8 @@ class Game {
   start() {
     this.tiles = [null];
     let number = 1;
-    for(number; number < (this.fieldSize * this.fieldSize); number++) {
-      this.tiles.push(number)
+    for (number; number < this.fieldSize * this.fieldSize; number++) {
+      this.tiles.push(number);
     }
     this.tiles = shuffle(this.tiles);
     this.emptyIndex = this.tiles.indexOf(null);
@@ -35,7 +35,7 @@ class Game {
       cursorIndex + 1,
       cursorIndex - 1,
       cursorIndex + this.fieldSize,
-      cursorIndex - this.fieldSize
+      cursorIndex - this.fieldSize,
     ];
 
     if (possibleMoves.includes(this.emptyIndex)) {
@@ -45,7 +45,7 @@ class Game {
       return newIndex;
     }
 
-    return  cursorIndex;
+    return cursorIndex;
   }
 
   /**
@@ -60,8 +60,8 @@ class Game {
       return false; // a solved puzzle has first or last empty element
     }
     let key = offset;
-    for (key; key < (this.tiles.length - 1 - offset); key++) {
-      if (this.tiles[key] !== (key + 1 - offset)) {
+    for (key; key < this.tiles.length - 1 - offset; key++) {
+      if (this.tiles[key] !== key + 1 - offset) {
         return false;
       }
     }

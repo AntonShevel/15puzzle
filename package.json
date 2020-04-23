@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/git/puzzl.git"
+    "url": "git+https://github.com:AntonShevel/15puzzle.git"
   },
   "author": "Anton",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/git/puzzl/issues"
+    "url": "https://github.com/AntonShevel/15puzzle/issues"
   },
-  "homepage": "https://github.com/git/puzzl#readme",
+  "homepage": "https://github.com/AntonShevel/15puzzle#readme",
   "dependencies": {
     "blessed": "0.1.81"
   },

@@ -8,7 +8,7 @@ class Screen {
    */
   constructor(title) {
     this.screen = blessed.screen({
-      smartCSR: true
+      smartCSR: true,
     });
 
     this.screen.title = title;
@@ -21,7 +21,10 @@ class Screen {
    * @returns {*}
    */
   createBox(top, left, content) {
-    const contentString = content && typeof content.toString === 'function' ? content.toString() : '';
+    const contentString =
+      content && typeof content.toString === 'function'
+        ? content.toString()
+        : '';
 
     const box = blessed.box({
       top,
@@ -32,19 +35,19 @@ class Screen {
       align: 'center',
       tags: false,
       border: {
-        type: 'line'
+        type: 'line',
       },
       style: {
         fg: 'white',
         border: {
-          fg: 'white'
+          fg: 'white',
         },
         focus: {
           border: {
-            fg: 'green'
+            fg: 'green',
           },
-        }
-      }
+        },
+      },
     });
     this.screen.append(box);
 
@@ -61,7 +64,7 @@ class Screen {
     const text = blessed.text({
       top,
       left,
-      content
+      content,
     });
     this.screen.append(text);
 
