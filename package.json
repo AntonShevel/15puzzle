@@ -1,0 +1,22 @@
+{
+  "name": "15puzzle",
+  "version": "1.0.0",
+  "description": "also called Gem Puzzle, Boss Puzzle, Game of Fifteen, Mystic Square and many others",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/git/puzzl.git"
+  },
+  "author": "Anton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/git/puzzl/issues"
+  },
+  "homepage": "https://github.com/git/puzzl#readme",
+  "dependencies": {
+    "blessed": "0.1.81"
+  }
+}
