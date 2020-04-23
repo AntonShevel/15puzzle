@@ -34,7 +34,6 @@ screen.onKey('space', () => {
       text.setContent('Nice move');
     }
   } else {
-    console.log('cannot move', board.cursorIndex, 'to', newCursor);
     text.setContent('Cannot move');
   }
   screen.render();

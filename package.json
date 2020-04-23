@@ -19,5 +19,8 @@
   "homepage": "https://github.com/git/puzzl#readme",
   "dependencies": {
     "blessed": "0.1.81"
+  },
+  "devDependencies": {
+    "jest": "25.4.0"
   }
 }

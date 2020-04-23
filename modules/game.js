@@ -37,10 +37,12 @@ class Game {
       cursorIndex + this.fieldSize,
       cursorIndex - this.fieldSize
     ];
-    console.log('possible moves from', cursorIndex, 'are: ', possibleMoves, 'valid: ', this.emptyIndex);
+
     if (possibleMoves.includes(this.emptyIndex)) {
       swap(this.tiles, cursorIndex, this.emptyIndex);
-      return this.emptyIndex;
+      const newIndex = this.emptyIndex;
+      this.emptyIndex = cursorIndex;
+      return newIndex;
     }
 
     return  cursorIndex;
@@ -59,7 +61,7 @@ class Game {
     }
     let key = offset;
     for (key; key < (this.tiles.length - 1 - offset); key++) {
-      if (this.tiles[key] !== key) {
+      if (this.tiles[key] !== (key + 1 - offset)) {
         return false;
       }
     }
