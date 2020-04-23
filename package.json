@@ -4,7 +4,8 @@
   "description": "also called Gem Puzzle, Boss Puzzle, Game of Fifteen, Mystic Square and many others",
   "main": "app.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
